@@ -1,1 +1,9 @@
-# Loan-Default-Prediction
+**Welcome!** This repository contains the code for my final project in SS4850G: Advanced Data Analysis at the University of Western Ontario. For my project, I analyzed Kaggle's [Loan Default Prediction Dataset](https://www.kaggle.com/datasets/nikhil1e9/loan-default), which was a part of Coursera's Loan Prediction Challenge held from August 29th to August 31st, 2023. The dataset contains a sample of individuals who received loans in 2021. 
+
+The main goals of this analysis were to 1) evaluate and compare the performance of classification trees, random forests, and regularized logistic regression in predicting loan defaults, 2) determine if random downsampling of the majority class improves the performance of these classifiers, and 3) identify the most influential factors in predicting loan default status.  
+
+In the modelling Jupyter notebook, you will find a table summarizing the performance of the three models, both with and without downsampling. The table includes four performance metrics: Accuracy, Precision, Recall, and F1 Score. Since the dataset has a class imbalance, with significantly more individuals who didn't default on their loans than those who did, an emphasis was placed on comparing the models based on their Precision, Recall, and F1 scores. Additionally, each model's hyperparameters and cutoffs were tuned to optimize the F1 score.  
+
+The random forest with downsampling was the top-performing model. It had the highest Precision and F1 score, and relatively high Accuracy and Recall compared to the other models. In general, random downsampling improved the classification tree's and random forest's performance; however, it reduced the performance of regularized logistic regression.  
+
+As it was the top performer, a permutation feature importance plot was created for the down-sampled random forest to obtain feature importances. This plot was constructed using the test set. The results revealed that Age, Interest Rate, and Income were the most influential predictors in determining whether an individual defaults on a loan.    
